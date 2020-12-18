@@ -231,92 +231,6 @@ class Grafo {
     }
 }
 
-/* let g = new Grafo();
-
-g.addVertice("tumbes");
-g.addVertice("loreto");
-g.addVertice("piura");
-g.addVertice("cajamarca");
-g.addVertice("lambayeque");
-g.addVertice("san martin");
-g.addVertice("ancash");
-g.addVertice("pasco");
-g.addVertice("lima");
-g.addVertice("cuzco");
-g.addVertice("ucayaly");
-g.addVertice("ica");
-g.addVertice("apurimac");
-g.addVertice("madre de dios");
-g.addVertice("arequipa");
-g.addVertice("puno");
-g.addVertice("tacna");
-
-g.addArista("tumbes", "loreto", 500);
-g.addArista("tumbes", "piura", 150);
-g.addArista("tumbes", "cajamarca", 400);
-g.addArista("piura", "cajamarca", 300);
-g.addArista("piura", "lambayeque", 120);
-g.addArista("cajamarca", "loreto", 450);
-g.addArista("cajamarca", "lambayeque", 150);
-g.addArista("cajamarca", "ancash", 350);
-g.addArista("cajamarca", "san martin", 220);
-g.addArista("loreto", "san martin", 450);
-g.addArista("loreto", "ucayaly", 530);
-g.addArista("san martin", "ancash", 250);
-g.addArista("san martin", "pasco", 200);
-g.addArista("san martin", "ucayaly", 480);
-g.addArista("lambayeque", "ancash", 320);
-g.addArista("ancash", "lima", 380);
-g.addArista("ancash", "pasco", 340);
-g.addArista("ancash", "cuzco", 250);
-g.addArista("pasco", "ucayaly", 480);
-g.addArista("pasco", "cuzco", 320);
-g.addArista("lima", "cuzco", 235);
-g.addArista("lima", "ica", 225);
-g.addArista("cuzco", "apurimac", 170);
-g.addArista("cuzco", "ucayaly", 410);
-g.addArista("cuzco", "madre de dios", 280);
-g.addArista("ucayaly", "madre de dios", 225);
-g.addArista("ica", "apurimac", 300);
-g.addArista("ica", "arequipa", 500);
-g.addArista("apurimac", "puno", 150);
-g.addArista("apurimac", "arequipa", 221);
-g.addArista("apurimac", "madre de dios", 150);
-g.addArista("madre de dios", "puno", 235);
-g.addArista("arequipa", "puno", 350);
-g.addArista("arequipa", "tacna", 250);
-g.addArista("puno", "tacna", 150);
-
-
-let a = g.Prim("tumbes");
-let nodos = [];
-let nombres = {};
-for (let i = 0; i < a.length; i++) {
-    nodos.push({ id: (i + 1), label: a[i][1], font: { size: 17, color: "green" } });
-    nombres[a[i][1]] = i + 1;
-}
-let aristas = [];
-for (let i = 1; i < a.length; i++) {
-    //,font: { strokeWidth: 2, strokeColor: "lightgreen" }
-    aristas.push({ from: nombres[a[i][0]], to: nombres[a[i][1]], label: a[i][2] })
-}
-// create a network
-var container = document.getElementById("mynetwork");
-var data = {
-    nodes: nodos,
-    edges: aristas,
-};
-var options = {
-    nodes: {
-        shape: "dot",
-        size: 10,
-    },
-};
-var network = new vis.Network(container, data, options); */
-
-
-
-
 
 
 leerArchivo("calles1.json", function (text) { //►[N+N(N+N+N(A+2N))+4N+A^2+3NA+N^2+N] → [2N^3+3N^2+N^2A+A^2+3NA+6N]
@@ -355,13 +269,22 @@ leerArchivo("calles1.json", function (text) { //►[N+N(N+N+N(A+2N))+4N+A^2+3NA+
     
     console.log(grafo.print()) // ►1
     console.log(grafo.vertices) // ►1
+    //calles1 plaza de armas -71.53626471,-16.39858007
+    //moral -71.53472971,-16.39784338
+    //rivero -71.5336289,-16.39821731
     let a = grafo.Prim("-71.53626471,-16.39858007"); //►[4N+A^2+3NA]
     console.log(a); //1
     //se crean los nodos para crear el grafo
     let nodos = []; //1
     let nombres = {}; //1
     for (let i = 0; i < a.length; i++) { //►N
+        if(i== 0){
+            nodos.push({ id: (i + 1), label: grafo.searchVertice(a[i][1]).color, color: "red",font: { size: 17, color: "green" } }); //►N
+            
+        }
+        else{
         nodos.push({ id: (i + 1), label: grafo.searchVertice(a[i][1]).color, font: { size: 17, color: "green" } }); //►N
+        }
         nombres[a[i][1]] = i + 1; //►1
     }
     //se crean las aristas para crear el grafo

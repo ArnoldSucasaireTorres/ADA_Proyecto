@@ -1,0 +1,153 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "id": "9ce2397f-cac0-426a-a8c2-11fa9b1f7db4",
+            "properties": {
+                "name": "arequipa/jerusalen"
+            },
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.53472971,
+                        -16.39784338
+                    ],
+                    [
+                        -71.53430036,
+                        -16.39677556
+                    ],
+                    [
+                        -71.53388162,
+                        -16.39577651
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "d5258c2c-af5d-4b43-9a98-17e5befcb7cc",
+            "properties": {
+                "name": "arequipa/calle rivero"
+            },
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.5336289,
+                        -16.39821731
+                    ],
+                    [
+                        -71.5332148,
+                        -16.39714749
+                    ],
+                    [
+                        -71.53277224,
+                        -16.39617509
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "58e651e1-15f8-4168-8cb0-c6a7c746333a",
+            "properties": {
+                "name": "arequipa/santa marta"
+            },
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.5332148,
+                        -16.39714749
+                    ],
+                    [
+                        -71.53215973,
+                        -16.39755575
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "60ff5c4c-ad72-4c55-8ff0-916e7ea02ba3",
+            "properties": {
+                "name": "arequipa/calle moral"
+            },
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.5368628,
+                        -16.39709142
+                    ],
+                    [
+                        -71.5357834,
+                        -16.39748179
+                    ],
+                    [
+                        -71.53472971,
+                        -16.39784338
+                    ],
+                    [
+                        -71.5336289,
+                        -16.39821731
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "15e9f08d-bc15-4d32-a737-be3119a3e681",
+            "properties": {
+                "name": "arequipa/urgarte"
+            },
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.53647011,
+                        -16.39603216
+                    ],
+                    [
+                        -71.53538572,
+                        -16.39640369
+                    ],
+                    [
+                        -71.53430036,
+                        -16.39677556
+                    ],
+                    [
+                        -71.5332148,
+                        -16.39714749
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "32218825-e990-4250-927d-06ef6550c8a8",
+            "properties": {
+                "name": "arequipa/calle san francisco"
+            },
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.5357834,
+                        -16.39748179
+                    ],
+                    [
+                        -71.53538572,
+                        -16.39640369
+                    ],
+                    [
+                        -71.53497814,
+                        -16.39539847
+                    ]
+                ]
+            }
+        }
+    ]
+}
